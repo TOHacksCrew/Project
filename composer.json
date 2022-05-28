@@ -1,0 +1,5 @@
+{
+    "require": {
+        "rickkuilman/digital-humani-php-sdk": "^2.0"
+    }
+}
