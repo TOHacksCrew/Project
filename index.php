@@ -18,6 +18,22 @@
         </h1>
     </header>
     <main>
+        <form action="/action_page.php">
+       
+     
+        <label for="firstname">Enter your first name:</label>
+        <input type="firstname" id="firstname" name="firstname">
+            <br>
+            <label for="lastname">Enter your last name:</label>
+        <input type="lastname" id="lastname" name="lastname">
+            <br>
+            <label for="email">Enter your email:</label>
+        <input type="email" id="email" name="email">
+        <br>
+        <input type="submit">
+            
+
+        </form>
         <div class="pure-g">
             <div class="pure-u-1-2">
                 <span>Description</span>
