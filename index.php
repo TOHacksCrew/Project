@@ -75,13 +75,13 @@ if (isset($_POST['submit'])) {
 <body>
 
 <div class="splash-container">
+<img src="img/tree.jpg" alt="Tree">
+
     <div class="splash">
         <h1 class="splash-head">Tree Huggers</h1>
         <p class="splash-subhead">
             For every email we obtain, we will plant a tree 
-            where they are needed the most! <br>It's easy tree-zy!
-        </p>
-        <p>
+            where they are needed the most! <br>It's easy tree-zy!<br><br><br>
             <a href="#start" class="pure-button pure-button-primary">Get Started</a>
         </p>
     </div>
