@@ -16,6 +16,12 @@ html {
     box-sizing: border-box;
 }
 
+:root {
+    background-image: url("../img/tree.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100%; /*view height:*/
+  }
 /*
  * -- BASE STYLES --
  * Most of these are inherited from Base, but I want to change a few.
@@ -169,11 +175,11 @@ a.pure-button-primary {
 /* This is the main heading that appears on the blue section */
 .splash-head {
     font-size: 60px;
-    font-weight: bold;
+    font-weight: 120px;
     color: white;
     /*border: 3px solid white;*/
     padding: 1em 1.6em;
-    font-weight: 100;
+    font-weight: 100%;
     border-radius: 5px;
     line-height: 1em;
 }

@@ -68,7 +68,7 @@ if (isset($_POST['submit'])) {
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arbor</title>
+    <title>Tree Huggers</title>
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
     <link rel="stylesheet" href="styles/master.css">
 </head>
@@ -76,9 +76,10 @@ if (isset($_POST['submit'])) {
 
 <div class="splash-container">
     <div class="splash">
-        <h1 class="splash-head">Tree Hugger</h1>
+        <h1 class="splash-head">Tree Huggers</h1>
         <p class="splash-subhead">
-            Description of our site
+            For every email we obtain, we will plant a tree 
+            where they are needed the most! <br>It's easy tree-zy!
         </p>
         <p>
             <a href="#start" class="pure-button pure-button-primary">Get Started</a>
