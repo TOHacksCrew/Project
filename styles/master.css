@@ -175,7 +175,7 @@ a.pure-button-primary {
     color: white;
     /*border: 3px solid white;*/
     padding: 1em 1.6em;
-    font-weight: 100;
+    font-weight: 100%;
     border-radius: 5px;
     line-height: 1em;
 }

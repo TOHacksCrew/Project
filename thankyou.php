@@ -13,9 +13,10 @@
 
 <div class="splash-container">
     <div class="splash">
-        <h1 class="splash-head">Tree Hugger</h1>
+        <h1 class="splash-head">Tree Huggers</h1>
         <p class="splash-subhead">
-            Description of our site
+            For every email we obtain, we will plant a tree 
+            where they are needed the most! <br>It's easy tree-zy!
         </p>
     </div>
 </div>
