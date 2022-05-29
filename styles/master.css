@@ -16,12 +16,6 @@ html {
     box-sizing: border-box;
 }
 
-:root {
-    background-image: url("../img/tree.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 100%; /*view height:*/
-  }
 /*
  * -- BASE STYLES --
  * Most of these are inherited from Base, but I want to change a few.
@@ -163,6 +157,9 @@ a.pure-button-primary {
 
 .splash {
     /* absolute center .splash within .splash-container */
+    background: #606c38;
+    border-radius: 10px;
+    padding: auto;
     width: 80%;
     height: 50%;
     margin: auto;
