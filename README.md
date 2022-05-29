@@ -20,3 +20,7 @@ After taking the form data, the PHP checks if your email has already been entere
     - Linux Server Setup,
     - Teamwork and collaboration!
 
+## Authours
+[Avery Chin](https://github.com/billvanleeuwen424)
+[Lindsay Sarson](https://github.com/lindsaysarson)
+[Bill Van Leeuwen](https://github.com/billvanleeuwen424)
