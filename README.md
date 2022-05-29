@@ -1,5 +1,5 @@
 # The Tree Huggers Reforestation Project!
-[thetreehuggers.tech](thetreehuggers.tech)
+
 
 Built for TOHacks 2022!
 
@@ -15,6 +15,7 @@ After taking the form data, the PHP checks if your email has already been entere
     - Linux Development Environments,
     - PHP,
     - HTML/CSS,
+    - MySQL,
     - CSS Frameworks ([pure.css](https://purecss.io/)),
     - External API Calls ([DigitalHumani RaaS API](https://www.digitalhumani.com/raas)),
     - Linux Server Setup,
