@@ -85,15 +85,16 @@ label {
 .pure-button {
     background-color: #606c38;
     color: white;
-    padding: 0.5em 2em;
+    padding: 1em 2em;
     border-radius: 5px;
+    font-size: 80%;
 }
 
 a.pure-button-primary {
     background: white;
     color: #606c38;
     border-radius: 5px;
-    font-size: 120%;
+    font-size: 100%;
 }
 
 
@@ -244,6 +245,12 @@ a.pure-button-primary {
     width: 100%;
 }
 
+#mandatory {
+    color: #2d3e50;
+    font-size: 80%;
+}
+
+
 /*
  * -- TABLET (AND UP) MEDIA QUERIES --
  * On tablets and other medium-sized devices, we want to customize some
@@ -310,10 +317,8 @@ a.pure-button-primary {
   }
   
   .error {
-    padding-top: 0.2rem;
-    padding-bottom: 0.2rem;
 
     color: crimson;
     font-weight: bold;
-    font-size: 15px;
+    font-size: 70%;
   }
