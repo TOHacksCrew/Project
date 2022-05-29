@@ -3,7 +3,7 @@
 
 
 html {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Helvetica', 'Arial', sans-serif;
     background-color: #faf6ed;
     color: #010101;
 }
@@ -22,8 +22,8 @@ html {
  */
 body {
     line-height: 1.7em;
-    color: #7f8c8d;
-    font-size: 13px;
+    color: #BCEBCB;
+    font-size: 30px;
 }
 
 h1,
@@ -83,7 +83,7 @@ label {
  * I want my pure-button elements to look a little different
  */
 .pure-button {
-    background-color: #1f8dd6;
+    background-color: #606c38;
     color: white;
     padding: 0.5em 2em;
     border-radius: 5px;
@@ -91,7 +91,7 @@ label {
 
 a.pure-button-primary {
     background: white;
-    color: #1f8dd6;
+    color: #606c38;
     border-radius: 5px;
     font-size: 120%;
 }
@@ -107,6 +107,7 @@ a.pure-button-primary {
     text-align: center;
     box-shadow: 0 1px 1px rgba(0,0,0, 0.10);
 }
+/*grey black*/
 .home-menu {
     background: #2d3e50;
 }
@@ -126,7 +127,7 @@ a.pure-button-primary {
 .home-menu .pure-menu-selected a {
     color: white;
 }
-
+/*light blue*/
 .home-menu a {
     color: #6FBEF3;
 }
@@ -142,9 +143,9 @@ a.pure-button-primary {
  * -- SPLASH STYLES --
  * This is the blue top section that appears on the page.
  */
-
+/* blue */
 .splash-container {
-    background: #1f8dd6;
+    background: #606c38;
     z-index: 1;
     overflow: hidden;
     /* The following styles are required for the "scroll-over" effect */
@@ -168,10 +169,10 @@ a.pure-button-primary {
 
 /* This is the main heading that appears on the blue section */
 .splash-head {
-    font-size: 20px;
+    font-size: 60px;
     font-weight: bold;
     color: white;
-    border: 3px solid white;
+    /*border: 3px solid white;*/
     padding: 1em 1.6em;
     font-weight: 100;
     border-radius: 5px;
@@ -183,6 +184,8 @@ a.pure-button-primary {
     color: white;
     letter-spacing: 0.05em;
     opacity: 0.8;
+    padding: 1em 1.6em;
+
 }
 
 /*
@@ -217,21 +220,22 @@ a.pure-button-primary {
 .content-head-ribbon {
     color: white;
 }
-
+/*blue*/
 /* This is the class used for the content sub-headers (<h3>) */
 .content-subhead {
-    color: #1f8dd6;
+    color: #606c38;
 }
     .content-subhead i {
         margin-right: 7px;
     }
 
 /* This is the class used for the dark-background areas. */
+/*grey black*/
 .ribbon {
     background: #2d3e50;
     color: #aaa;
 }
-
+/* black*/
 /* This is the class used for the footer */
 .footer {
     background: #111;
@@ -249,7 +253,7 @@ a.pure-button-primary {
 
     /* We increase the body font size */
     body {
-        font-size: 16px;
+        font-size: 30px;
     }
 
     /* We can align the menu header to the left, but float the
@@ -274,7 +278,7 @@ a.pure-button-primary {
     }
 
     .splash-head {
-        font-size: 250%;
+        font-size: 300%;
     }
 
 
@@ -293,6 +297,23 @@ a.pure-button-primary {
 @media (min-width: 78em) {
     /* We increase the header font size even more */
     .splash-head {
-        font-size: 300%;
+        font-size: 200%;
     }
 }
+
+/**********************************************/
+/*              Error Message                 */
+/**********************************************/
+
+.hidden {
+    display: none;
+  }
+  
+  .error {
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+
+    color: crimson;
+    font-weight: bold;
+    font-size: 15px;
+  }
