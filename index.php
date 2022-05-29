@@ -1,5 +1,6 @@
 <?php
-
+//treeplanting api call
+include 'includes/treeapi.php';
 
 
 $fname = $_POST['fname'] ?? null;
@@ -44,9 +45,12 @@ if (isset($_POST['submit'])) {
             $query = "INSERT INTO `USERS` VALUES (?,?,?)";
             $stmt = $pdo->prepare($query);
             $stmt->execute([$fname, $lname, $email]);
+            
+            //call api only once per email address
+            plantTree($email);
         }
 
-
+        
         //send the user to the thankyou page.
         header("Location:thankyou.php");
         exit();
