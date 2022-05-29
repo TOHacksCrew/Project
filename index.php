@@ -22,26 +22,26 @@ if (isset($_POST['submit'])) {
         $pdo = connectDB();
         
         // We need to know if the email is already in our database
-        $query = "SELECT * FROM `project_3420_timesheets` WHERE `email`=?";
+        $query = "SELECT * FROM `USERS` WHERE `email`= ?";
         $stmt = $pdo->prepare($query);
         $stmt->execute([$email]);
 
         $user = $stmt->fetch();
 
         // If email exists 
-        if ($user['email'] != NULL) {
-            if($user['fname'] == NULL){
+        if (!is_null($user['email'])) {
+            if(is_null($user['fname']) || $user['fname'] == ""){
                 $query = "UPDATE `USERS` SET `fname` = ? WHERE `email` = ?";
                 $stmt = $pdo->prepare($query);
                 $stmt->execute([$fname, $email]);
             }
-            if($user['lname'] == NULL){
-            $query = "UPDATE `USERS` SET `lname`= ? WHERE `email` = ?";
-            $stmt = $pdo->prepare($query);
-            $stmt->execute([$lname, $email]);
+            if(is_null($user['lname'])|| $user['lname'] == ""){
+                $query = "UPDATE `USERS` SET `lname`= ? WHERE `email` = ?";
+                $stmt = $pdo->prepare($query);
+                $stmt->execute([$lname, $email]);
             }
         }
-        else if ($user['email'] == NULL){
+        else if (is_null($user['email'])){
             $query = "INSERT INTO `USERS` VALUES (?,?,?)";
             $stmt = $pdo->prepare($query);
             $stmt->execute([$fname, $lname, $email]);
@@ -96,13 +96,13 @@ if (isset($_POST['submit'])) {
 
 
                         <label for="fname">Your First Name</label>
-                        <input id="fname" name="fname" type="text" placeholder="First Name Here">
+                        <input id="fname" name="fname" type="text" value="<?=$_POST['fname'] ?? null ?>" placeholder="First Name Here">
 
                         <label for="lname">Your Last Name</label>
-                        <input id="lname" name="lname" type="text" placeholder="Last Name Here">
+                        <input id="lname" name="lname" type="text" value="<?=$_POST['lname'] ?? null ?>" placeholder="Last Name Here">
 
                         <label for="email">Your Email*</label>
-                        <input id="email" name="email" type="email" placeholder="Email Here">
+                        <input id="email" name="email" type="email" value="<?=$_POST['email'] ?? null ?>" placeholder="Email Here">
                         <span class="error <?=!isset($errors['email']) ? 'hidden' : "";?>">Please enter a Valid Email<br></span>
                         
                         <span>* fields are mandatory<br></span>
