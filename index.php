@@ -18,13 +18,16 @@ if (isset($_POST['submit'])) {
 
         $pdo = connectDB();
 
+        //$query = "SELECT * FROM `project_3420_timesheets` WHERE `email`" ;
+
+        //if ()
         $query = "INSERT INTO `USERS` VALUES (?,?,?)";
         $stmt = $pdo->prepare($query);
         $stmt->execute([$fname, $lname, $email]);
 
-      //send the user to the thankyou page.
-      header("Location:thankyou.php");
-      exit();
+        //send the user to the thankyou page.
+        header("Location:thankyou.php");
+        exit();
     }
 
 }
@@ -47,7 +50,7 @@ if (isset($_POST['submit'])) {
 
 <div class="splash-container">
     <div class="splash">
-        <h1 class="splash-head">I ain't Fukkin wi chu</h1>
+        <h1 class="splash-head">Tree Hugger</h1>
         <p class="splash-subhead">
             Description of our site
         </p>
@@ -74,7 +77,8 @@ if (isset($_POST['submit'])) {
 
                         <label for="email">*Your Email</label>
                         <input id="email" name="email" type="email" placeholder="Email Here">
-                        <span class="error <?=!isset($errors['email']) ? 'hidden' : "";?>">Please enter a Valid Email</span>
+                        <span class="error <?=!isset($errors['email']) ? 'hidden' : "";?>">Please enter a Valid Email<br></span>
+                        
 
                         <button id="submit" name="submit" type="submit" class="pure-button">Let's Plant it!</button>
 
