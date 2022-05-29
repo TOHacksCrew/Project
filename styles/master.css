@@ -59,7 +59,6 @@ label {
 }
 
 
-
 /*
  * -- PURE FORM STYLES --
  * Style the form inputs and labels
@@ -138,7 +137,6 @@ a.pure-button-primary {
     border: none;
     color: #AECFE5;
 }
-
 
 /*
  * -- SPLASH STYLES --
@@ -273,7 +271,7 @@ a.pure-button-primary {
         }
 
     /* We increase the height of the splash-container */
-/*    .splash-container {
+    /*    .splash-container {
         height: 500px;
     }*/
 
