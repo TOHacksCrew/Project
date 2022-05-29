@@ -9,7 +9,7 @@ function plantTree($email){
     $apikey = $apiini['apikey'];
     
     
-    $url = "https://api.sandbox.digitalhumani.com/tree";
+    $url = "https://api.digitalhumani.com/tree";
     $data = [
         'treeCount' => 1,
         'enterpriseId' => 'aef88679',
@@ -31,7 +31,6 @@ function plantTree($email){
     $response = curl_exec($curl);
     curl_close($curl);
     
-
 }
 
 ?>
