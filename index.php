@@ -19,14 +19,37 @@ if (isset($_POST['submit'])) {
         include 'includes/library.php';
 
         $pdo = connectDB();
-
-        $query = "INSERT INTO `USERS` VALUES (?,?,?)";
+        
+        // We need to know if the email is already in our database
+        $query = "SELECT * FROM `project_3420_timesheets` WHERE `email`=?";
         $stmt = $pdo->prepare($query);
-        $stmt->execute([$fname, $lname, $email]);
+        $stmt->execute([$email]);
 
-      //send the user to the thankyou page.
-      header("Location:thankyou.php");
-      exit();
+        $user = $stmt->fetch();
+
+        // If email exists 
+        if ($user['email'] != NULL) {
+            if($user['fname'] == NULL){
+                $query = "UPDATE `USERS` SET `fname` = ? WHERE `email` = ?";
+                $stmt = $pdo->prepare($query);
+                $stmt->execute([$fname, $email]);
+            }
+            if($user['lname'] == NULL){
+            $query = "UPDATE `USERS` SET `lname`= ? WHERE `email` = ?";
+            $stmt = $pdo->prepare($query);
+            $stmt->execute([$lname, $email]);
+            }
+        }
+        else if ($user['email'] == NULL){
+            $query = "INSERT INTO `USERS` VALUES (?,?,?)";
+            $stmt = $pdo->prepare($query);
+            $stmt->execute([$fname, $lname, $email]);
+        }
+
+
+        //send the user to the thankyou page.
+        header("Location:thankyou.php");
+        exit();
     }
 
 }
@@ -49,7 +72,7 @@ if (isset($_POST['submit'])) {
 
 <div class="splash-container">
     <div class="splash">
-        <h1 class="splash-head">I ain't Fukkin wi chu</h1>
+        <h1 class="splash-head">Tree Hugger</h1>
         <p class="splash-subhead">
             Description of our site
         </p>
@@ -74,12 +97,14 @@ if (isset($_POST['submit'])) {
                         <label for="lname">Your Last Name</label>
                         <input id="lname" name="lname" type="text" placeholder="Last Name Here">
 
-                        <label for="email">*Your Email</label>
+                        <label for="email">Your Email*</label>
                         <input id="email" name="email" type="email" placeholder="Email Here">
-                        <span class="error <?=!isset($errors['email']) ? 'hidden' : "";?>">Please enter a Valid Email</span>
-
+                        <span class="error <?=!isset($errors['email']) ? 'hidden' : "";?>">Please enter a Valid Email<br></span>
+                        
+                        <span>* fields are mandatory<br></span>
                         <button id="submit" name="submit" type="submit" class="pure-button">Let's Plant it!</button>
 
+                        
                 </form>
             </div>
         </div>
