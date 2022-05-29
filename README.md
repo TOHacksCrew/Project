@@ -1,5 +1,5 @@
 # The Tree Huggers Reforestation Project!
-[thetreehuggers.tech](thetreehuggers.tech)
+
 
 Built for TOHacks 2022!
 
