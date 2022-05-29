@@ -105,7 +105,7 @@ if (isset($_POST['submit'])) {
                         <input id="email" name="email" type="email" value="<?=$_POST['email'] ?? null ?>" placeholder="Email Here">
                         <span class="error <?=!isset($errors['email']) ? 'hidden' : "";?>">Please enter a Valid Email<br></span>
                         
-                        <span>* fields are mandatory<br></span>
+                        <span id="mandatory">* fields are mandatory<br></span>
                         <button id="submit" name="submit" type="submit" class="pure-button">Let's Plant it!</button>
 
                         
